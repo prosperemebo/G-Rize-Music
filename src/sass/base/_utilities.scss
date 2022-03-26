@@ -72,7 +72,7 @@
     color: $color-primary !important;
 
     &::before {
-      height: 100%;
+      height: 100% !important;
     }
   }
 }

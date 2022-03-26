@@ -41,75 +41,87 @@
       }
     }
   }
+}
+.info {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  padding: 3rem;
+  z-index: 1000;
 
-  .info {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem;
-    z-index: 1000;
+  @include respond(tab-port) {
+    padding: 1.5rem;
+  }
 
-    @include respond(tab-port) {
-      padding: 1.5rem;
-    }
+  @include respond(phone) {
+    padding: 1rem;
+  }
 
-    @include respond(phone) {
-      padding: 1rem;
-    }
+  &--right {
+    right: 0;
+    left: auto;
+    padding-right: 0;
+    padding-bottom: 6rem;
+  }
+}
 
-    .socials {
+.socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  @include respond(phone) {
+    // flex-direction: row;
+    gap: 3rem;
+  }
+
+  li {
+    a {
+      color: inherit;
+      font-size: 1.3rem;
+      height: 3rem;
+      width: 3rem;
+      background-color: transparent;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      gap: 2rem;
+      justify-content: center;
+      border-radius: 50%;
+      overflow: hidden;
 
       @include respond(phone) {
-        // flex-direction: row;
-        gap: 3rem;
-      }
-
-      li {
-        font-size: 1.3rem;
-        height: 3rem;
-        width: 3rem;
-        background-color: transparent;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        transition: background-color 250ms, color 250ms;
-        transition-timing-function: $bezier-curve;
-
-        &:hover {
-          background-color: $color-accent;
-          color: $color-primary;
-        }
-
-        @include respond(phone) {
-          font-size: 1rem;
-        }
-
-        a {
-          color: inherit;
-        }
+        font-size: 1rem;
       }
     }
+  }
+}
 
-    .scroll {
-      transform-origin: top right;
-      display: block;
-      transform: rotate(270deg);
-      margin-right: 1.8rem;
+.scroll {
+  display: block;
+  transform: rotate(270deg) translate(-10%, 70%);
+  color: $color-secondary;
 
-      small {
-        letter-spacing: 0.7em;
-        padding-left: 1rem;
-      }
+  &::before {
+    width: 0%;
+    height: 100%;
+
+    transition: width 0.5s;
+    transition-timing-function: $bezier-curve;
+  }
+
+  &:hover,
+  &:active {
+    &::before {
+      width: 100% !important;
     }
+  }
+
+  small {
+    letter-spacing: 0.7em;
+    padding-left: 1rem;
   }
 }

@@ -2,6 +2,11 @@
   margin-top: 25rem;
   margin-bottom: 25rem;
 
+  @include respond(tab-port) {
+    margin-top: 25rem;
+    margin-bottom: 15rem;
+  }
+
   .swiper {
     width: 100%;
     height: 75rem;
@@ -20,5 +25,48 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.section-songs {
+  margin-bottom: 25rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 15rem;
+  }
+
+  .songs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    // grid-auto-rows: 15rem;
+    gap: 3rem;
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+
+    .song {
+      img {
+        width: 100%;
+        object-fit: contain;
+        margin-bottom: 2rem;
+
+        @include respond(tab-port) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      figcaption {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+          font-weight: 500;
+          font-size: $default-font-size;
+          text-transform: uppercase;
+        }
+      }
+    }
   }
 }

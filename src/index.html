@@ -18,6 +18,11 @@
     />
     <link rel="stylesheet" href="css/app.css" />
     <title>G-Rize</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -34,10 +39,10 @@
         <div class="player"></div>
 
         <ul class="nav-list">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Songs</a></li>
-          <li><a href="#">Merch</a></li>
-          <li><a href="#">Follow</a></li>
+          <li><a class="juice0" href="#">About</a></li>
+          <li><a class="juice" href="#">Songs</a></li>
+          <li><a class="juice" href="#">Merch</a></li>
+          <li><a class="juice" href="#">Follow</a></li>
         </ul>
       </nav>
       <div class="overview">
@@ -77,8 +82,8 @@
       </div>
     </header>
     <section class="section-about">
-      <div class="desc">
-        <h2 class="heading-primary u-margin-bottom-big">About</h2>
+      <div class="desc u-margin-bottom-medium">
+        <h2 class="heading-primary u-margin-bottom-small juice">About</h2>
         <p class="heading-secondary u-margin-bottom-medium">
           With more than 14 years of musical history, he has dedicated himself
           to entertaining!
@@ -95,7 +100,30 @@
           after relocating, he earned the stage name "G-Rize."
         </p>
       </div>
+
+      <!-- Swiper -->
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/img1.png" alt="G-Rize" draggable="false" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/img2.png" alt="G-Rize" draggable="false" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/img3.png" alt="G-Rize" draggable="false" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/img4.png" alt="G-Rize" draggable="false" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/img5.png" alt="G-Rize" draggable="false" />
+          </div>
+        </div>
+      </div>
     </section>
     <footer class="footer"></footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>

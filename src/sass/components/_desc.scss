@@ -1,0 +1,13 @@
+.desc {
+  .heading-secondary {
+    width: 40vw;
+
+    @include respond(tab-port) {
+      width: 60vw;
+    }
+
+    @include respond(phone) {
+      width: 80vw;
+    }
+  }
+}

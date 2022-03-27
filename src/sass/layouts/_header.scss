@@ -57,7 +57,7 @@
   }
 
   @include respond(phone) {
-    padding: 1rem;
+    padding: 0.3rem;
   }
 
   &--right {
@@ -104,6 +104,10 @@
   display: block;
   transform: rotate(270deg) translate(-10%, 70%);
   color: $color-secondary;
+
+  @include respond(phone) {
+    transform: rotate(270deg) translate(-10%, 100%);
+  }
 
   &::before {
     width: 0%;

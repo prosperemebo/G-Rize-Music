@@ -8,22 +8,28 @@ let swiper = new Swiper('.swiper', {
       spaceBetween: 20,
     },
     900: {
-      slidesPerView: 2,
+      slidesPerView: 2.3,
       spaceBetween: 30,
     },
     1200: {
-      slidesPerView: 3,
+      slidesPerView: 3.2,
       spaceBetween: 30,
     },
   },
-  // breakpoints: {
-  //   600: {
-  //     slidesPerView: 1,
-  //     spaceBetween: 20,
-  //   },
-  //   900: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 40,
-  //   },
-  // },
+});
+
+let swiper2 = new Swiper('.videos', {
+  slidesPerView: 1.2,
+  spaceBetween: 20,
+  freeMode: true,
+  breakpoints: {
+    600: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
+    900: {
+      slidesPerView: 2.3,
+      spaceBetween: 30,
+    },
+  },
 });

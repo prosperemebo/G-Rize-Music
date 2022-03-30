@@ -1,8 +1,10 @@
 .section-about {
-  margin-top: 25rem;
+  margin-top: 15rem;
+  padding-top: 10rem;
 
-  @include respond(tab-port) {
-    margin-top: 25rem;
+  @include respond(phone) {
+    margin-top: 20rem;
+    padding-top: 5rem;
   }
 
   .swiper {
@@ -65,7 +67,7 @@
 
 .section-videos {
   .swiper {
-    aspect-ratio: 16/9;
+    // aspect-ratio: 16/9;
     // width: 100%;
     // height: auto;
   }
@@ -76,7 +78,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
     object-fit: contain;
 
     iframe {
@@ -94,9 +95,15 @@
 }
 
 .section-home {
-  margin-bottom: 25rem;
+  margin-bottom: 15em;
+  padding-top: 10rem;
 
   @include respond(tab-port) {
-    margin-bottom: 15rem;
+    margin-bottom: 5rem;
+  }
+
+  @include respond(phone) {
+    padding-top: 5rem;
+    margin-bottom: 10rem;
   }
 }

@@ -9,7 +9,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = (env, argv) => ({
   mode: argv.mode,
   devtool: argv.mode === 'development' ? 'source-map' : false,
-  entry: ['./src/js/app.js', './src/sass/main.scss'],
+  entry: ['./src/js/app.js', './src/js/main.js', './src/sass/main.scss'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/app.js',
@@ -76,6 +76,10 @@ module.exports = (env, argv) => ({
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'videos/index.html',
+      template: './src/videos/index.html',
     }),
     new MiniCssExtractPlugin({
       filename: 'css/app.css',

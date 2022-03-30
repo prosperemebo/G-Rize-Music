@@ -1,0 +1,280 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+    <title>G-Rize</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    /> -->
+  </head>
+
+  <body class="body-page">
+    <div class="overlays">
+      <div class="popup" id="popup">
+        <div class="content">
+          <button class="popup__close juice" id="popup-close">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="contain" id="popup-contain"></div>
+        </div>
+      </div>
+    </div>
+    <header class="header header__videos">
+      <nav class="navigation navigation--white">
+        <input type="checkbox" id="navi" class="navigation__checkbox" />
+
+        <label for="navi" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <ul class="nav-list">
+          <li><a class="juice main-nav-link" href="/">Home</a></li>
+          <li><a class="juice main-nav-link" href="/#about">About</a></li>
+          <li><a class="juice main-nav-link" href="/#music">Music</a></li>
+          <li><a class="juice main-nav-link" href="#tours">Tours</a></li>
+          <li><a class="juice main-nav-link" href="/videos">Videos</a></li>
+          <li><a class="juice main-nav-link" href="#blog">Blog</a></li>
+          <li><a class="juice main-nav-link" href="#">Merch</a></li>
+        </ul>
+      </nav>
+      <div class="video-overview">
+        <div class="image">
+          <img
+            src="https://i.ytimg.com/vi/MFX7rw0BHLw/maxresdefault.jpg"
+            alt="G-Rize"
+            draggable="false"
+          />
+        </div>
+        <div class="overlay">
+          <div class="actions">
+            <button class="prev-btn" id="prev-btn">
+              <i class="fas fa-angle-left"></i>
+            </button>
+            <button class="juice play-btn" id="play-btn">
+              <i class="fas fa-play"></i>
+            </button>
+            <button class="next-btn" id="next-btn">
+              <i class="fas fa-angle-right"></i>
+            </button>
+          </div>
+          <div class="video-desc">
+            <h2 class="heading-secondary">
+              G-Rize - BADO (Official music video)
+            </h2>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-videos body-padding">
+      <h2 class="heading-primary juice u-margin-bottom-medium">Videos</h2>
+      <div class="section-videos__videos">
+        <figure class="video" data-video-id="">
+          <img src="images/album1.png" alt="G-Rize" draggable="false" />
+          <figcaption>
+            <p class="paragraph">VIEWING</p>
+            <button class="play-btn">
+              <i class="fas fa-play"></i>
+            </button>
+            <h2 class="heading-secondary">
+              G-Rize - BADO (Official music video)
+            </h2>
+          </figcaption>
+        </figure>
+        <figure class="video video-viewing" data-video-id="">
+          <img src="images/album1.png" alt="G-Rize" draggable="false" />
+          <figcaption>
+            <p class="paragraph">VIEWING</p>
+            <button class="play-btn">
+              <i class="fas fa-play"></i>
+            </button>
+            <h2 class="heading-secondary">
+              G-Rize - BADO (Official music video)
+            </h2>
+          </figcaption>
+        </figure>
+        <figure class="video" data-video-id="">
+          <img src="images/album1.png" alt="G-Rize" draggable="false" />
+          <figcaption>
+            <p class="paragraph">VIEWING</p>
+            <button class="play-btn">
+              <i class="fas fa-play"></i>
+            </button>
+            <h2 class="heading-secondary">
+              G-Rize - BADO (Official music video)
+            </h2>
+          </figcaption>
+        </figure>
+        <figure class="video" data-video-id="">
+          <img src="images/album1.png" alt="G-Rize" draggable="false" />
+          <figcaption>
+            <p class="paragraph">VIEWING</p>
+            <button class="play-btn">
+              <i class="fas fa-play"></i>
+            </button>
+            <h2 class="heading-secondary">
+              G-Rize - BADO (Official music video)
+            </h2>
+          </figcaption>
+        </figure>
+        <figure class="video" data-video-id="">
+          <img src="images/album1.png" alt="G-Rize" draggable="false" />
+          <figcaption>
+            <p class="paragraph">VIEWING</p>
+            <button class="play-btn">
+              <i class="fas fa-play"></i>
+            </button>
+            <h2 class="heading-secondary">
+              G-Rize - BADO (Official music video)
+            </h2>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="swiper videos-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <figure class="video" data-video-id="">
+              <img src="images/album1.png" alt="G-Rize" draggable="false" />
+              <figcaption>
+                <p class="paragraph">VIEWING</p>
+                <h2 class="heading-secondary">
+                  G-Rize - BADO (Official music video)
+                </h2>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure class="video video-viewing" data-video-id="">
+              <img src="images/album2.png" alt="G-Rize" draggable="false" />
+              <figcaption>
+                <p class="paragraph">VIEWING</p>
+                <h2 class="heading-secondary">
+                  G-Rize - BADO (Official music video)
+                </h2>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure class="video" data-video-id="">
+              <img src="images/album1.png" alt="G-Rize" draggable="false" />
+              <figcaption>
+                <p class="paragraph">VIEWING</p>
+                <h2 class="heading-secondary">
+                  G-Rize - BADO (Official music video)
+                </h2>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure class="video" data-video-id="">
+              <img src="images/album1.png" alt="G-Rize" draggable="false" />
+              <figcaption>
+                <p class="paragraph">VIEWING</p>
+                <h2 class="heading-secondary">
+                  G-Rize - BADO (Official music video)
+                </h2>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <ul class="socials info">
+      <li>
+        <a class="juice" href="#" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </li>
+      <li>
+        <a class="juice" href="#" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+      </li>
+      <li>
+        <a class="juice" href="#" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </li>
+      <li>
+        <a class="juice" href="#" target="_blank"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </li>
+    </ul>
+
+    <div class="info info--right">
+      <a href="#" class="scroll juice">
+        <i class="fas fa-angle-left"></i>
+        <small>SCROLL</small>
+      </a>
+    </div>
+    <footer class="footer body-padding">
+      <p class="credit">
+        Copyright &copy; <span class="year">2027</span> by G-Rize Music.
+      </p>
+      <ul class="links">
+        <li>
+          <a
+            class="juice"
+            href="https://music.apple.com/mx/artist/g-rize/446797877?l=en"
+            target="_blank"
+            >Apple Music</a
+          >
+        </li>
+        <li>
+          <a
+            class="juice"
+            href="https://open.spotify.com/artist/7amEjSJPVzTbXWzfVjjsTe"
+            target="_blank"
+            >Spotify</a
+          >
+        </li>
+        <li>
+          <a
+            class="juice"
+            href="https://www.boomplay.com/artists/284470"
+            target="_blank"
+            >Boomplay</a
+          >
+        </li>
+        <li>
+          <a
+            class="juice"
+            href="https://www.youtube.com/channel/UCLbP6vrKzw_jzxbBLEOoiTg"
+            target="_blank"
+            >Youtube</a
+          >
+        </li>
+      </ul>
+      <p class="author">Reframed by Prosper Emebo</p>
+    </footer>
+
+    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </body>
+</html>

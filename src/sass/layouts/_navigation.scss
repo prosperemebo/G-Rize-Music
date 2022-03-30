@@ -1,4 +1,8 @@
 .navigation {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
   padding: 5rem 0;
   display: flex;
   justify-content: space-between;
@@ -49,6 +53,16 @@
     }
   }
 
+  &--white {
+    .nav-list li a {
+      color: $color-primary;
+
+      @include respond(phone) {
+        color: $color-secondary;
+      }
+    }
+  }
+
   &__button {
     background-color: $color-primary;
     border-radius: 50%;
@@ -63,6 +77,7 @@
     display: none;
 
     @include respond(phone) {
+      box-shadow: 2px 10px 30px rgba($color-accent, 0.2);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -117,11 +132,11 @@
   }
 
   //FUNCTIONALITY
-  &__checkbox:checked ~ &__background {
+  &.nav-open &__background {
     height: 100vh;
   }
 
-  &__checkbox:checked ~ .nav-list {
+  &.nav-open .nav-list {
     opacity: 1;
     width: 100%;
     left: 0;
@@ -135,17 +150,44 @@
     top: 1rem;
   }
 
-  &__checkbox:checked ~ &__button &__icon {
+  &.nav-open &__button &__icon {
     background-color: transparent;
   }
 
-  &__checkbox:checked ~ &__button &__icon::before {
+  &.nav-open &__button &__icon::before {
     top: 0;
     transform: rotate(135deg);
   }
 
-  &__checkbox:checked ~ &__button &__icon::after {
+  &.nav-open &__button &__icon::after {
     top: 0;
     transform: rotate(-135deg);
   }
+
+  &.sticky {
+    position: fixed;
+    background-color: $color-primary;
+    padding: 1.5rem;
+    box-shadow: 2px 10px 40px rgba($color-accent, 0.13);
+    z-index: 1000;
+    animation: slideIn 1s $bezier-curve forwards;
+
+    @include respond(phone) {
+      position: absolute;
+      padding: 0;
+    }
+
+    .nav-list li a {
+      font-size: 1.3rem;
+      color: $color-secondary;
+
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
+  }
 }
+
+// .navigation.nav-open ~ .section-home {
+//   pointer-events: none;
+// }

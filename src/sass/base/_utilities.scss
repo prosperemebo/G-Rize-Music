@@ -53,6 +53,7 @@
   transition: color 0.5s;
   padding: 0.5rem;
   transition-timing-function: $bezier-curve;
+  z-index: 1;
 
   &::before {
     content: '';

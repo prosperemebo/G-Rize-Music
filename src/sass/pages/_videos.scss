@@ -1,0 +1,231 @@
+.body-page {
+  padding: 0;
+}
+
+.body-padding {
+  padding-left: 8vw;
+  padding-right: 8vw;
+}
+
+.section-videos {
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+
+  @include respond(tab-port) {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+
+  &__videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-auto-rows: 25rem;
+    grid-gap: 3rem;
+    height: auto;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+
+    .video {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+
+      &.video-viewing {
+        pointer-events: none;
+
+        figcaption {
+          background-color: rgba($color-secondary, 0.6);
+          transform: scale(1);
+          opacity: 1;
+        }
+
+        img {
+          transform: scale(1.2);
+        }
+
+        p {
+          display: block;
+          color: $color-primary;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 2rem;
+          letter-spacing: 1.8;
+        }
+
+        button {
+          display: none;
+        }
+
+        h2 {
+          display: none;
+        }
+      }
+
+      p {
+        display: none;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s $bezier-curve;
+      }
+
+      figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color-secondary, 0.3);
+        display: flex;
+        justify-content: center;
+        transform: scale(0.8);
+        transition: transform 0.5s, opacity 0.5s;
+        transition-timing-function: $bezier-curve;
+        opacity: 0;
+
+        button {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+          border: none;
+          font-size: 2rem;
+          height: 5rem;
+          width: 5rem;
+          border-radius: 50%;
+          background-color: transparent;
+          border: 3px solid $color-primary;
+          color: $color-primary;
+
+          i {
+            position: absolute;
+            top: 50%;
+            left: 54%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        h2 {
+          color: $color-primary;
+          align-self: flex-end;
+          text-align: center;
+          font-size: 1.5rem;
+          font-weight: 400;
+          padding-bottom: 1rem;
+        }
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.2);
+        }
+
+        figcaption {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .videos-swiper {
+    display: none;
+    // aspect-ratio: 20/ 9;
+    height: 40rem;
+    width: 100%;
+
+    @include respond(tab-port) {
+      display: block;
+    }
+
+    .swiper-slide {
+      //   height: 30rem;
+      margin-right: 2rem;
+
+      .video {
+        width: 100%;
+        // height: 100%;
+        cursor: pointer;
+
+        &.video-viewing {
+          pointer-events: none;
+
+          figcaption {
+            opacity: 1;
+          }
+
+          //   img {
+          //     transform: scale(1.2);
+          //   }
+
+          p {
+            display: block;
+            color: $color-primary;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            letter-spacing: 1.8;
+            background-color: rgba($color-secondary, 0.6);
+            padding: 2rem 4rem;
+          }
+        }
+
+        p {
+          display: none;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        figcaption {
+          position: absolute;
+          top: 0%;
+          left: 00%;
+          height: 100%;
+          width: 100%;
+          background-image: linear-gradient(
+            to bottom,
+            rgba($color-secondary, 0.1),
+            rgba($color-secondary, 0.2),
+            rgba($color-secondary, 0.3),
+            rgba($color-secondary, 0.6)
+          );
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+
+          h2 {
+            font-size: 2rem;
+            padding: 1rem;
+            font-weight: 400;
+            color: $color-primary;
+            padding: 1rem;
+          }
+        }
+      }
+    }
+
+    .swiper-slide img {
+      display: block;
+      //   height: 25rem;
+      //   width: ;
+      // height: 100%;
+      // object-fit: contain;
+    }
+  }
+}

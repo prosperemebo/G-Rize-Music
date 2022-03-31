@@ -29,13 +29,14 @@
     height: 3rem;
     width: 3rem;
     padding: 1.5rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $color-primary;
   }
 
   .content {
@@ -82,6 +83,11 @@
         @include respond(phone) {
           height: 100%;
         }
+      }
+
+      .youtube-video {
+        height: 100%;
+        width: 100%;
       }
     }
 

@@ -302,6 +302,7 @@ const popupbtnEl = document.querySelector('#popup-close');
 const popupEl = document.querySelector('#popup');
 
 popupbtnEl.addEventListener('click', function () {
+  popupContainer.innerHTML = '';
   popupEl.classList.toggle('open');
 });
 

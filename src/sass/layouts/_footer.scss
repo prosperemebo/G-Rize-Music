@@ -44,6 +44,7 @@
   .author {
     text-align: right;
     grid-column: 4 / 5;
+    color: $color-primary;
 
     @include respond(tab-port) {
       grid-row: 2 / 3;

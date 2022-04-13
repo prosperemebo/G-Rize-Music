@@ -128,7 +128,7 @@ const playVideo = () => {
 
   popupContainer.insertAdjacentHTML('beforeend', markup);
 
-  window.location.hash = currentVideo.id;
+  // window.location.hash = currentVideo.id;
 
   popup.classList.toggle('open');
 };
@@ -158,6 +158,11 @@ desktopLibary.addEventListener('click', (e) => {
     prevId = currentVideo;
     let id = e.target.closest('figure.video').getAttribute('data-video-id');
 
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+
     openVideo(id);
   }
 });
@@ -165,8 +170,12 @@ desktopLibary.addEventListener('click', (e) => {
 mobileLibary.addEventListener('click', (e) => {
   if (e.target.matches('figure.video, figure.video *')) {
     prevId = currentVideo;
-
     let id = e.target.closest('figure.video').getAttribute('data-video-id');
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
 
     openVideo(id);
   }

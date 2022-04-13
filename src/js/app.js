@@ -35,8 +35,47 @@
 
 const albumData = [
   {
+    label: 'BADO',
+    image: 'album4.jpg',
+    links: [
+      {
+        label: 'Tidal',
+        url: 'https://tidal.com/album/221717525',
+      },
+      {
+        label: 'Apple Music',
+        url: 'https://music.apple.com/mx/album/bado-single/1615183490?l=en',
+      },
+      {
+        label: 'Spotify',
+        url: 'https://open.spotify.com/album/6isPUVRC57DUnDtIKx3JfT?highlight=spotify:track:4oqcymWk1fwS48kDOctwN0',
+      },
+      {
+        label: 'Amazon Music',
+        url: 'https://www.amazon.com/music/player/albums/B09VZ8WL23?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&trackAsin=B09VZ9CWLX&ref=mp_s_a_1_2&keywords=bado+g-rize&crid=1VYC5JLXKSRBY&sprefix=bado+g-rize%2Caps%2C84&qid=1649721365&sr=8-2',
+      },
+      {
+        label: 'Deezer',
+        url: 'https://www.deezer.com/en/album/304296177',
+      },
+      {
+        label: 'Boomplay',
+        url: 'https://www.boomplay.com/songs/86358395?srModel=COPYLINK&srList=WEB',
+      },
+      {
+        label: 'Audiomack',
+        url: 'https://audiomack.com/g-rizeofficial/song/bado',
+      },
+      {
+        label: 'YouTube Play',
+        url: 'https://youtu.be/MFX7rw0BHLw',
+      },
+    ],
+    playlist: ['1. Bado'],
+  },
+  {
     label: 'LKGB',
-    image: 'album1.png',
+    image: 'album1.jpg',
     links: [
       {
         label: 'Tidal',
@@ -80,7 +119,7 @@ const albumData = [
   },
   {
     label: 'Masterpiece',
-    image: 'album2.png',
+    image: 'album2.jpg',
     links: [
       {
         label: 'Spotify',
@@ -126,7 +165,7 @@ const albumData = [
   },
   {
     label: 'Tumba',
-    image: 'album3.png',
+    image: 'album3.jpg',
     links: [
       {
         label: 'Apple Music',
@@ -360,5 +399,18 @@ albumpopupbtnEl.forEach((btn) => {
     });
 
     popupEl.classList.toggle('open');
+  });
+});
+
+const scrollDown = document.querySelector('#scroll-act');
+
+scrollDown.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  let currentPos = window.scrollY;
+
+  window.scrollTo({
+    top: currentPos + 200,
+    behavior: 'smooth',
   });
 });

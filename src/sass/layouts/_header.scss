@@ -1,6 +1,6 @@
 .header {
   &__videos {
-    height: 80rem;
+    height: 90vh;
     width: 100%;
 
     .video-overview {
@@ -199,8 +199,11 @@
 
 .scroll {
   display: block;
-  transform: rotate(270deg) translate(-10%, 70%);
+  transform: rotate(270deg) translate(10%, 70%);
   color: $color-secondary;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 
   @include respond(phone) {
     transform: rotate(270deg) translate(-10%, 100%);
